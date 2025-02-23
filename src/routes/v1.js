@@ -97,7 +97,7 @@ router.post('/chat/completions', async (req, res) => {
     const cursorClientVersion = "0.45.11"
 
     // Request the AvailableModels before StreamChat.
-    const availableModelsResponse = await fetch("https://api2.cursor.sh/aiserver.v1.AiService/AvailableModels", {
+    const availableModelsResponse = fetch("https://api2.cursor.sh/aiserver.v1.AiService/AvailableModels", {
       method: 'POST',
       headers: {
         'accept-encoding': 'gzip',
